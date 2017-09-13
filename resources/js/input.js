@@ -1,16 +1,16 @@
 $(document).on('ajaxComplete ready', function () {
+    var $decimals = $('input[data-provides="anomaly.field_type.decimal"]:not([data-initialized])');
 
-    var decimals = $('input[data-provides="anomaly.field_type.decimal"]:not([data-initialized])');
-
-    decimals.attr('data-initialized', '');
+    $decimals.attr('data-initialized', '');
 
     // Initialize decimals
-    decimals.on('change', function () {
+    $decimals.on('change', function () {
+        var $this = $(this);
 
-        if ($(this).val() == '') {
+        if ($this.val() === '') {
             return;
         }
 
-        $(this).val(Number($(this).val()).toFixed($(this).data('decimals')));
+        $this.val(Number($this.val()).toFixed($this.data('decimals')));
     });
 });
