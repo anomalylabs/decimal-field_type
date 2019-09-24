@@ -17,7 +17,7 @@ class DecimalFieldTypeSchema extends FieldTypeSchema
 {
 
     /**
-     * @param Blueprint           $table
+     * @param Blueprint $table
      * @param AssignmentInterface $assignment
      */
     public function addColumn(Blueprint $table, AssignmentInterface $assignment)
