@@ -9,7 +9,10 @@ return [
         ],
     ],
     'min'           => [
-        'type' => 'anomaly.field_type.text',
+        'type'  => 'anomaly.field_type.text',
+        'rules' => [
+            'numeric',
+        ],
     ],
     'max'           => [
         'type'  => 'anomaly.field_type.text',
